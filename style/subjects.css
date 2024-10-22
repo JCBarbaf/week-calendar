@@ -1,0 +1,49 @@
+:root {
+  --mat: rgb(0, 164, 219);
+  --cast: rgb(153, 0, 0);
+  --cat: rgb(51, 51, 190);
+  --ef: rgb(109, 0, 0);
+  --fyq: rgb(231, 127, 0);
+  --bio: rgb(70, 160, 70);
+  --ing: rgb(136, 49, 136);
+  --dig: rgb(158, 158, 158);
+  --val: rgb(110, 189, 192);
+  --gyh: rgb(219, 186, 0);
+}
+.mat {
+  background-color: var(--mat);
+  color: var(--white);
+}
+.cast {
+  background-color: var(--cast);
+  color: var(--white);
+}
+.cat {
+  background-color: var(--cat);
+  color: var(--white);
+}
+.ef {
+  background-color: var(--ef);
+  color: var(--white);
+}
+.fyq {
+  background-color: var(--fyq);
+  color: var(--white);
+}
+.bio {
+  background-color: var(--bio);
+  color: var(--white);
+}
+.ing {
+  background-color: var(--ing);
+  color: var(--white);
+}
+.dig {
+  background-color: var(--dig);
+}
+.val {
+  background-color: var(--val);
+}
+.gyh {
+  background-color: var(--gyh);
+}
