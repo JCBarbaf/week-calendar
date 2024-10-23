@@ -241,6 +241,7 @@ body {
   & input, & label, & select {
     display: block;
     color: var(--black);
+    font: inherit;
   }
   & input, & select {
     width: 100%;

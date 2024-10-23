@@ -8,6 +8,7 @@ document.querySelector('.calendar').addEventListener('click', (event) => {
     modal.classList.add('active')
   }
 })
+
 modal.addEventListener('click', (event) => {
   if (event.target.closest('.close-button') || !event.target.closest('.modal')) {
     modal.classList.remove('active')

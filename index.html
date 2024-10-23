@@ -15,9 +15,9 @@
     <header class="app-header">
       <h1>Calendario semanal</h1>
       <div class="week-control">
-        <button class="arrow-button" data-action="prior"><</button>
-        <input type="date" name="calendar" class="date-input">
-        <button class="arrow-button" data-action="next">></button>
+        <button class="arrow-button" data-action="prior" title="Anterior"><</button>
+        <input type="date" name="calendar" class="date-input" title="Elegir fecha">
+        <button class="arrow-button" data-action="next" title="Siguiente">></button>
       </div>
     </header>
     <main class="app-main">
@@ -146,11 +146,11 @@
           <td class="day"></td>
         </tr>
         <tr class="content-row"></tr>
-          <td class="add-button">+</td>
-          <td class="add-button">+</td>
-          <td class="add-button">+</td>
-          <td class="add-button">+</td>
-          <td class="add-button">+</td>
+          <td class="add-button" title="Añadir evento">+</td>
+          <td class="add-button" title="Añadir evento">+</td>
+          <td class="add-button" title="Añadir evento">+</td>
+          <td class="add-button" title="Añadir evento">+</td>
+          <td class="add-button" title="Añadir evento">+</td>
         </tr>
       </table>
     </main>
@@ -173,7 +173,7 @@
             <div class="form-element">
               <label for="eventSubject">Asignatura:</label>
               <select name="eventSubject" id="eventSubject" required>
-                <option value="" selected disabled>---Asignatura---</option>
+                <option value="" selected disabled>-Asignatura-</option>
                 <option value="mat">Matemáticas</option>
                 <option value="bio">Biología</option>
                 <option value="fyq">física y química</option>
@@ -192,7 +192,7 @@
             </div>
             <div class="form-element">
               <label for="eventTime">Hora:</label>
-              <input type="time" name="eventTime" id="eventTime" required>
+              <input type="time" name="eventTime" id="eventTime" value="08:00" required>
             </div>
           </div>
           <div class="button-container">
