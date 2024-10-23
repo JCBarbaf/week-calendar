@@ -146,14 +146,61 @@
           <td class="day"></td>
         </tr>
         <tr class="content-row"></tr>
-          <td class="add">+</td>
-          <td class="add">+</td>
-          <td class="add">+</td>
-          <td class="add">+</td>
-          <td class="add">+</td>
+          <td class="add-button">+</td>
+          <td class="add-button">+</td>
+          <td class="add-button">+</td>
+          <td class="add-button">+</td>
+          <td class="add-button">+</td>
         </tr>
       </table>
     </main>
+  </div>
+  <div class="modal-background">
+    <div class="modal">
+      <header class="modal-header">
+        <h2>Crear nuevo evento</h2>
+        <button class="close-button">X</button>
+      </header>
+      <main class="modal-main">
+        <form action="" class="event-form">
+          <div class="form-row">
+            <div class="form-element">
+              <label for="eventName">Nombre del evento:</label>
+              <input type="text" name="eventName" id="eventName" placeholder="Nombre del evento" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-element">
+              <label for="eventSubject">Asignatura:</label>
+              <select name="eventSubject" id="eventSubject" required>
+                <option value="" selected disabled>---Asignatura---</option>
+                <option value="mat">Matemáticas</option>
+                <option value="bio">Biología</option>
+                <option value="fyq">física y química</option>
+                <option value="gyh">Geografía e historia</option>
+                <option value="cast">Castellano</option>
+                <option value="cat">Catalán</option>
+                <option value="ing">Inglés</option>
+                <option value="ef">Edicación física</option>
+                <option value="dig">Digitalización</option>
+                <option value="val">Valores</option>
+              </select>
+            </div>
+            <div class="form-element">
+              <label for="eventDate">Fecha:</label>
+              <input type="date" name="eventDate" id="eventDate" required>
+            </div>
+            <div class="form-element">
+              <label for="eventTime">Hora:</label>
+              <input type="time" name="eventTime" id="eventTime" required>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="submit-event">Crear</button>
+          </div>
+        </form>
+      </main>
+    </div>
   </div>
 </body>
 </html>

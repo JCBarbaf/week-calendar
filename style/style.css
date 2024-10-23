@@ -9,7 +9,7 @@
   --secondary-color: rgb(206, 203, 211);
   --darker-secondary-color: color-mix(in srgb, var(--secondary-color), black 20%);
   --lighter-secondary-color: color-mix(in srgb, var(--secondary-color), white 20%);
-  --white: rgb(210,210,230);
+  --white: rgb(230,230,250);
   --black: rgb(0,0,20);
   --border: 0.25rem solid rgb(0,0,0,0.2);
 }
@@ -65,6 +65,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 0 0 rgb(0,0,0,0.2);
+  z-index: 10;
   &:first-of-type {
     border-right: var(--border);
     border-radius: 0.5rem 0 0 0.5rem;
@@ -87,6 +88,7 @@ body {
   font: inherit;
   font-size: 0.75rem;
   cursor: pointer;
+  z-index: 20;
   &:hover {
     filter: brightness(1.1);
   }
@@ -165,15 +167,118 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1rem;
+  font-weight: bold;
 }
 
-.add {
+.content-main {
+  padding: 0.25rem;
+  border-top: var(--border);
+  border-width: 0.15rem;
+  text-align: justify;
+}
+
+.add-button {
   text-align: center;
   background-color: var(--lighter-primary-color);
   color: var(--black);
   border-color: color-mix(in srgb, var(--lighter-primary-color), black 20%);
   font-size: 1.25rem;
   font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.modal-background {
+  position: fixed;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0,0,0,0.2);
+  transition: opacity 0.05s ease-in;
+  z-index: 100;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modal {
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 0 0 rgb(0,0,0,0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-bottom: var(--border);
+}
+
+.close-button {
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.modal-main {
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.event-form {
+  & input, & label, & select {
+    display: block;
+    color: var(--black);
+  }
+  & input, & select {
+    width: 100%;
+    min-height: 2rem;
+    padding: 0.25rem;
+    background-color: var(--white);
+    border: var(--border);
+    border-width: 0.15rem;
+    &:focus {
+      outline: none;
+      border-color: rgb(0,0,0,0.5);
+    }
+  }
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.form-element {
+  flex: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+}
+
+.submit-event {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 0.25rem;
   cursor: pointer;
   &:hover {
     filter: brightness(1.1);
