@@ -85,7 +85,10 @@ calendar.addEventListener('dblclick', async (event) => {
 })
 
 dateInput.addEventListener('change', (event) => {
-  SetDates(dateInput.value)
+  const inputDate = new Date(dateInput.value)
+  if (inputDate instanceof Date && !isNaN(inputDate)) {
+    SetDates(dateInput.value)
+  }
 })
 
 async function SetDates(date) {

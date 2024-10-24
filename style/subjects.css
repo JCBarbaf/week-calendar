@@ -9,6 +9,7 @@
   --dig: rgb(158, 158, 158);
   --val: rgb(110, 189, 192);
   --gyh: rgb(219, 186, 0);
+  --otro: rgb(128, 128, 128);
 }
 .mat {
   background-color: var(--mat);
@@ -53,4 +54,7 @@
 }
 .gyh {
   background-color: var(--gyh);
+}
+.otro {
+  background-color: var(--otro);
 }
