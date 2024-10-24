@@ -45,105 +45,11 @@
           </th>
         </tr>
         <tr class="content-row">
-          <td class="day">
-            <div class="day-content-container">
-              <div class="day-content mat">
-                <header class="content-header">
-                  <p class="subject">Mat</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content cast">
-                <header class="content-header">
-                  <p class="subject">Cast</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa eum fugit nesciunt facilis sapiente impedit debitis atque repellat ea delectus laborum suscipit itaque, ad, non quibusdam quis nemo. Inventore!</p>
-                </main>
-              </div>
-              <div class="day-content cat">
-                <header class="content-header">
-                  <p class="subject">Cat</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content ef">
-                <header class="content-header">
-                  <p class="subject">Ef</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content fyq">
-                <header class="content-header">
-                  <p class="subject">Fyq</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content bio">
-                <header class="content-header">
-                  <p class="subject">Bio</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content ing">
-                <header class="content-header">
-                  <p class="subject">Ing</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content dig">
-                <header class="content-header">
-                  <p class="subject">Dig</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content val">
-                <header class="content-header">
-                  <p class="subject">Val</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-              <div class="day-content gyh">
-                <header class="content-header">
-                  <p class="subject">Gyh</p>
-                  <p class="time">09:00</p>
-                </header>
-                <main class="content-main">
-                  <p>Examen trigonometria</p>
-                </main>
-              </div>
-            </div>
-            
-          </td>
-          <td class="day"></td>
-          <td class="day"></td>
-          <td class="day"></td>
-          <td class="day"></td>
+          <td class="day"><div class="day-content-container"></div></td>
+          <td class="day"><div class="day-content-container"></div></td>
+          <td class="day"><div class="day-content-container"></div></td>
+          <td class="day"><div class="day-content-container"></div></td>
+          <td class="day"><div class="day-content-container"></div></td>
         </tr>
         <tr class="content-row"></tr>
           <td class="add-button" title="Añadir evento">+</td>
@@ -155,14 +61,15 @@
       </table>
     </main>
   </div>
-  <div class="modal-background">
+  <div class="modal-background events">
     <div class="modal">
       <header class="modal-header">
         <h2>Crear nuevo evento</h2>
         <button class="close-button">X</button>
       </header>
       <main class="modal-main">
-        <form action="" class="event-form">
+        <form class="event-form">
+          <input type="hidden" name="id">
           <div class="form-row">
             <div class="form-element">
               <label for="eventName">Nombre del evento:</label>
@@ -176,7 +83,7 @@
                 <option value="" selected disabled>-Asignatura-</option>
                 <option value="mat">Matemáticas</option>
                 <option value="bio">Biología</option>
-                <option value="fyq">física y química</option>
+                <option value="fyq">Física y química</option>
                 <option value="gyh">Geografía e historia</option>
                 <option value="cast">Castellano</option>
                 <option value="cat">Catalán</option>
@@ -199,6 +106,20 @@
             <button class="submit-event">Crear</button>
           </div>
         </form>
+      </main>
+    </div>
+  </div>
+  <div class="modal-background delete">
+    <div class="modal">
+      <header class="modal-header">
+        <h2>¿Quieres borrar el evento?</h2>
+        <button class="close-button">X</button>
+      </header>
+      <main class="modal-main">
+        <div class="delete-choice">
+          <button class="confirm-delete">Sí</button>
+          <button class="cancel-delete">No</button>
+        </div>
       </main>
     </div>
   </div>

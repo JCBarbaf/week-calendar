@@ -13,30 +13,37 @@
 .mat {
   background-color: var(--mat);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .cast {
   background-color: var(--cast);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .cat {
   background-color: var(--cat);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .ef {
   background-color: var(--ef);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .fyq {
   background-color: var(--fyq);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .bio {
   background-color: var(--bio);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .ing {
   background-color: var(--ing);
   color: var(--white);
+  --svg-color: var(--white);
 }
 .dig {
   background-color: var(--dig);

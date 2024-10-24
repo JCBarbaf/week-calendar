@@ -11,6 +11,9 @@
   --lighter-secondary-color: color-mix(in srgb, var(--secondary-color), white 20%);
   --white: rgb(230,230,250);
   --black: rgb(0,0,20);
+  --red: rgb(153, 0, 0);
+  --green: rgb(70, 160, 70);
+  --svg-color: var(--black);
   --border: 0.25rem solid rgb(0,0,0,0.2);
 }
 
@@ -36,9 +39,11 @@
 }
 
 button {
+  background: none;
   color: inherit;
   border: none;
   box-shadow: none;
+  font: inherit;
 }
 
 body {
@@ -170,11 +175,37 @@ body {
   font-weight: bold;
 }
 
+.subject {
+  text-transform: uppercase;
+}
+
 .content-main {
   padding: 0.25rem;
   border-top: var(--border);
   border-width: 0.15rem;
   text-align: justify;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.content-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  & button {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  & .icon {
+    width: 1.25rem;
+    & path {
+      fill: var(--svg-color);
+    }
+  }
 }
 
 .add-button {
@@ -208,6 +239,7 @@ body {
 }
 
 .modal {
+  min-width: 30rem;
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
   box-shadow: 0.5rem 0.5rem 0 0 rgb(0,0,0,0.2);
@@ -224,7 +256,6 @@ body {
 }
 
 .close-button {
-  background: none;
   font-weight: bold;
   cursor: pointer;
   &:hover {
@@ -283,5 +314,27 @@ body {
   cursor: pointer;
   &:hover {
     filter: brightness(1.1);
+  }
+}
+
+.delete-choice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & button {
+    padding: 0.5rem 3rem;
+    color: var(--white);
+    border-radius: 0.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+  & .confirm-delete {
+    background-color: var(--green);
+  }
+  & .cancel-delete {
+    background-color: var(--red);
   }
 }
